@@ -46,6 +46,8 @@ Generated files are saved in `procurecompare-output/`:
 
 The OpenAI model is accessed through CrewAI's `LLM` interface and is responsible for query generation and report writing. It never decides which API calls were executed and cannot add products that are absent from the validated extraction data.
 
+`agentops==0.4.21` is pinned for reproducibility. The notebook includes a compatibility adapter for the `_headers` and `_session` attributes removed from OpenTelemetry's HTTP exporter in version 1.45.
+
 ## Why the Tavily API Key Is Required
 
 The deterministic search stage uses `TAVILY_API_KEY` to authenticate with Tavily and executes every targeted query produced by the query-planning agent exactly once. For each query, Tavily returns:
