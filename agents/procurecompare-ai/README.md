@@ -46,7 +46,7 @@ Generated files are saved in `procurecompare-output/`:
 
 The OpenAI model is accessed through CrewAI's `LLM` interface and is responsible for query generation and report writing. It never decides which API calls were executed and cannot add products that are absent from the validated extraction data.
 
-`agentops==0.4.21` is pinned for reproducibility. The notebook includes a compatibility adapter for the `_headers` and `_session` attributes removed from OpenTelemetry's HTTP exporter in version 1.45.
+`agentops==0.4.21` is pinned for reproducibility. The notebook includes a compatibility adapter for the `_headers` and `_session` attributes removed from OpenTelemetry's HTTP exporter in version 1.45. It also disables AgentOps' separate console-log upload, which can return `401` on the free plan; OTLP traces, LLM spans, and Session Replay remain enabled.
 
 ## Why the Tavily API Key Is Required
 
