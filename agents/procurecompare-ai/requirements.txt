@@ -1,0 +1,12 @@
+# Orchestration et observabilité des agents
+crewai[tools,agentops]==0.114.0
+agentops
+
+# Recherche et extraction web
+tavily-python
+scrapegraph-py
+
+# Schémas de données et exécution du notebook
+pydantic
+python-dotenv
+jupyter

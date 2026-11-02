@@ -1,0 +1,19 @@
+# Environnements et cache Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+
+# Sorties générées par le workflow
+procurecompare-output/
+agentops.log
+
+# Fichiers de l'éditeur et du système
+.vscode/
+.idea/
+.DS_Store
