@@ -11,6 +11,7 @@ __pycache__/
 
 # Sorties générées par le workflow
 procurecompare-output/
+ai-agent-output/
 agentops.log
 
 # Fichiers de l'éditeur et du système

@@ -15,7 +15,7 @@ The workflow runs sequentially. CrewAI handles query planning and report writing
 3. Extract product information from e-commerce pages with ScrapeGraphAI.
 4. Generate an HTML comparison and recommendation report.
 
-Generated files are saved in `procurecompare-output/`:
+Generated files are saved in the repository-level `ai-agent-output/` directory. The notebook resolves this absolute path from the project location, so it does not change with the kernel working directory:
 
 | File | Contents |
 | --- | --- |
