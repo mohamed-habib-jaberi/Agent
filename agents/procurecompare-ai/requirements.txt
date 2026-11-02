@@ -1,6 +1,6 @@
 # Orchestration et observabilité des agents
 crewai[tools,agentops]==0.114.0
-agentops
+agentops==0.4.21
 
 # Recherche et extraction web
 tavily-python
