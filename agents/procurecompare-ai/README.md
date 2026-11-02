@@ -27,7 +27,7 @@ Generated files are saved in `procurecompare-output/`:
 ## Requirements
 
 - Python 3.10 through 3.12 (`crewai==0.114.0` is not compatible with Python 3.13 or 3.14)
-- API keys for OpenAI, Tavily, and ScrapeGraphAI
+- API keys for OpenAI, Tavily, and [ScrapeGraphAI](https://scrapegraphai.com/signup)
 - An optional AgentOps API key for observability
 
 ## Libraries and Their Purpose
