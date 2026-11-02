@@ -44,6 +44,32 @@ Generated files are saved in `procurecompare-output/`:
 
 The OpenAI model is accessed through CrewAI's `LLM` interface and is responsible for reasoning, query generation, product assessment, and report writing.
 
+## Why the ScrapeGraphAI API Key Is Required
+
+Tavily and ScrapeGraphAI have two different responsibilities in the workflow:
+
+```text
+Tavily → finds relevant product pages
+ScrapeGraphAI → extracts structured product data from those pages
+```
+
+Agent C uses `SCRAPEGRAPH_API_KEY` to authenticate with ScrapeGraphAI and analyze the product URLs returned by Tavily. For each product page, it extracts:
+
+- Product name and page URL
+- Current and original prices
+- Discount percentage
+- Product image URL
+- Important technical specifications
+- Information needed to rank and compare products
+
+Without this key, the project can generate search queries and find product pages, but it cannot transform those pages into comparable product records. Consequently, the final procurement report cannot be completed.
+
+Create a ScrapeGraphAI account and API key on the [official signup page](https://scrapegraphai.com/signup), then store the key locally:
+
+```env
+SCRAPEGRAPH_API_KEY=your_scrapegraph_api_key
+```
+
 ## Local Installation
 
 From the repository root, enter this project directory:
