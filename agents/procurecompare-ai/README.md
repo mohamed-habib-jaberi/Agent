@@ -44,6 +44,25 @@ Generated files are saved in `procurecompare-output/`:
 
 The OpenAI model is accessed through CrewAI's `LLM` interface and is responsible for reasoning, query generation, product assessment, and report writing.
 
+## Why the Tavily API Key Is Required
+
+Agent B uses `TAVILY_API_KEY` to authenticate with the Tavily search API and search the web using the targeted queries produced by Agent A. For each query, Tavily returns:
+
+- Relevant page titles and URLs
+- Short page-content summaries
+- Search relevance scores
+- The original search query associated with each result
+
+These results allow the workflow to identify likely e-commerce product pages and discard irrelevant or low-confidence links before scraping begins.
+
+Without this key, the project can generate search queries, but it cannot discover current product pages on the web. ScrapeGraphAI would therefore have no URLs to analyze.
+
+Create a Tavily account and API key on the [official Tavily dashboard](https://app.tavily.com), then store the key locally:
+
+```env
+TAVILY_API_KEY=your_tavily_api_key
+```
+
 ## Why the ScrapeGraphAI API Key Is Required
 
 Tavily and ScrapeGraphAI have two different responsibilities in the workflow:
